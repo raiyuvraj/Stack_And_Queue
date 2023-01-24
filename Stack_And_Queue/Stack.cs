@@ -36,6 +36,35 @@ namespace StackAndQueue
                 Console.WriteLine(temp.data + " ");
                 temp = temp.Next;
             }
+            if (top == null)
+            {
+                Console.WriteLine("Stack Empty");
+            }
+        }
+        public void Peek()//This method returns the object at the beginning of the stack without removing it.
+        {
+
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is empty");
+            }
+            else
+            {
+                Console.WriteLine("{0} is in the top of stack", top.data);
+            }
+        }
+        public void Pop()//This method returns the object at the beginning of the
+                         //stack with modification means this method removes the topmost element of the stack.
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is empty deletion is not possible");
+            }
+            else
+            {
+                Console.WriteLine("Values popped is {0} ", top.data);
+                top = top.Next;
+            }
         }
     }
 }
